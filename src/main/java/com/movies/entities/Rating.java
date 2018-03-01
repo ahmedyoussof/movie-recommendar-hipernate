@@ -1,14 +1,22 @@
 package com.movies.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="ratings")
 public class Rating {
     
-    
+	@Id
+	@Column(name = "rater_id")
     private Integer raterId;
-    
-    
-    private Integer movieId;
-    
-    
+	
+	@Column(name = "movie_id")
+	private Integer movieId;
+	
+	@Column(name="value")
     private Integer value;
 
     public Integer getRaterId() {
@@ -19,12 +27,12 @@ public class Rating {
         this.raterId = raterId;
     }
 
-    public Integer getMovieId() {
-        return movieId;
+	public Integer getMovieId() {
+		return movieId;
     }
 
-    public void setMovieId(Integer movieId) {
-        this.movieId = movieId;
+	public void setMovieId(Integer movieId) {
+		this.movieId = movieId;
     }
 
     public Integer getValue() {

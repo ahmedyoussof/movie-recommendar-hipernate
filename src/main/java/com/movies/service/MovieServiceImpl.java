@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import org.hibernate.Session;
 
 import com.movies.entities.Movie;
 import com.movies.entities.Rating;
@@ -19,10 +18,10 @@ public class MovieServiceImpl implements MovieService {
 
     private MovieDao movieDao = new MovieHibernateDoa();
 
-    public MovieServiceImpl(Session session) {
-        // TODO Auto-generated constructor stub
-        movieDao.setSession(session);
-    }
+	//    public MovieServiceImpl(Session session) {
+	//        
+	//        movieDao.setSession(session);
+	//    }
     
     
     @Override

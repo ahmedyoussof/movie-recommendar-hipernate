@@ -5,6 +5,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import com.movies.entities.Movie;
+import com.movies.entities.Rating;
 
 public class HibernateUtil {
 
@@ -14,6 +15,7 @@ public class HibernateUtil {
         try {
             Configuration configuration = new Configuration();
             configuration.addAnnotatedClass(Movie.class);
+			configuration.addAnnotatedClass(Rating.class);
             return configuration.buildSessionFactory(new StandardServiceRegistryBuilder().build());
         } catch (Exception e) {
             e.printStackTrace();

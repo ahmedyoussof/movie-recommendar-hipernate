@@ -123,7 +123,7 @@ public interface MovieService {
      * @param fileName refers to CSV file name
      * @return true if imported
      */
-    public boolean importMovies(String fileName);
+	public boolean importMovies(String filename);
 
     /**
      * list all movies
